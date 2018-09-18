@@ -41,11 +41,15 @@ $ npm start
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
 
 ## Documentation
-To generate the documentation, simply execute the command:
+You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
+Or you can generate locally using the command:
 
 ```shell
 $ npm rum generate-docs
 ```
+
+Just open the `docs/index.html` file in your browser and start browsing... :green_book:
+
 
 ## Licence
 The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE).
