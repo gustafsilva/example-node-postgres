@@ -71,7 +71,13 @@ module.exports = (server) => {
             if(res.rows.length > 0) {
               logged = true;
             }
-            response.send(200, {success: logged});
+            
+            if(logged) {
+              response.send(200, {success: logged});
+            }
+            else {
+              response.send(203, {success: logged});
+            }
           }
   
           client.end();
@@ -100,7 +106,12 @@ module.exports = (server) => {
             created = false;
           }
 
-          response.send(200, {success: created});
+          if(created){
+            response.send(201, {success: created});
+          }
+          else {
+            response.send(200, {success: created});
+          }
         }, client);     
       });
     }
@@ -122,14 +133,19 @@ module.exports = (server) => {
           response.send(503, errClient);
         }
   
-        queryParams("UPDATE users SET (name, password) = ($1, $2) WHERE email = $3;", [user.name, user.password, user.email], (err) => {
-          client.end();
-          let created = true;
-          if (err) {
-            created = false;
+        queryParams("UPDATE users SET (name, password) = ($1, $2) WHERE email = $3 RETURNING *;", [user.name, user.password, user.email], (err, res) => {
+          client.end();          
+          let updated = true;
+          if (err || res.rows.length <= 0) {
+            updated = false;
           }
 
-          response.send(200, {success: created});
+          if(updated){
+            response.send(200, {success: updated});
+          }
+          else {
+            response.send(203, {success: updated});
+          }
         }, client);     
       });
     }
