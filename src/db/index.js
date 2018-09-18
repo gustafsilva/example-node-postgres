@@ -1,5 +1,6 @@
 const { Pool } = require("pg");
 const { configDB } = require("./config");
+const log = require("ak-logger");
 
 const pool = new Pool(configDB);
 
@@ -10,8 +11,7 @@ const query = (text, callback) => {
   return pool.query(text, (err, res) => {
     const duration = Date.now() - start;
 
-    console.log("executed simple query", {text: text, duration: duration});
-
+    log.debug({text: text, duration: duration}, "Executed Simple Query");
     callback(err, res);
   });
 };
@@ -22,7 +22,7 @@ const queryParams = (text, params, callback) => {
   return pool.query(text, params, (err, res) => {
     const duration = Date.now() - start;
 
-    console.log("executed query:", {text: text, params: params, duration: duration});
+    log.info({text: text, params: params, duration: duration}, "Executed Query:");
     callback(err, res);
   });
 };
@@ -40,8 +40,7 @@ const getClient = (callback) => {
     };
 
     const timeout = setTimeout(() => {
-      console.error(`A client has been checked out for more than 5 seconds!`);
-      console.error(`The last executed query on this client was: ${client.lastQuery}`);
+      log.debug({duration: duration, lastQuery: client.lastQuery}, "The last executed query on this client was");
     }, 5000);
 
     const release = (err) => {
@@ -52,7 +51,7 @@ const getClient = (callback) => {
       client.query = query;
     }
 
-    console.log("new client connected", {duration: duration});
+    log.info({duration: duration}, "New Client Connected");
     callback(err, client, done);
   });
 };
