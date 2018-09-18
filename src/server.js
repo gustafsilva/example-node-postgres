@@ -1,5 +1,5 @@
 const restify = require("restify");
-const usersRoute = require("./src/routes/users");
+const usersRoute = require("./routes/users");
 
 const server = restify.createServer();
 

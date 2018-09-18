@@ -1,4 +1,4 @@
-const server = require("./server");
+const server = require("./src/server");
 const log = require("ak-logger");
 
 server.listen(3000, () => {

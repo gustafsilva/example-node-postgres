@@ -1,5 +1,5 @@
 const request = require("supertest");
-const server = require("../../server");
+const server = require("../../src/server");
 
 describe("Routes for users", () => {
   test("Capturing all users", () => {
