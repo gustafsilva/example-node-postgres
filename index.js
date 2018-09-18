@@ -1,13 +1,6 @@
-const restify = require("restify");
-const usersRoute = require("./src/routes/users");
-
-const server = restify.createServer();
-
-server.use(restify.plugins.queryParser());
-server.use(restify.plugins.bodyParser());
-
-usersRoute(server);
+const server = require("./src/server");
+const log = require("ak-logger");
 
 server.listen(3000, () => {
-  console.info("Server listen port 3000");
+  log.info({server: "localhost", port: 3000}, "Server listen");
 });
