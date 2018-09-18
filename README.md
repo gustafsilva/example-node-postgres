@@ -1,7 +1,7 @@
 # Example Simple API with Node Postgres + Restify
 Simple Example API Rest, using Node, restify, PostgreSQL, Docker and docker-compose.
 
-## Getting Started
+## Getting Started :rocket:
 
 First we'll clone the project.
 
@@ -29,7 +29,7 @@ $ cd ../
 $ npm start
 ```
 
-### Ready! :+1: You can already hack the project :rocket:
+### Ready! :+1: You can already hack the project :sunglasses:
 
 ## Dependencies
 * [Node](https://nodejs.org/)
@@ -47,14 +47,24 @@ $ npm run generate-docs
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
 
+[jsdoc](http://usejsdoc.org) was used for document automation :heart:
+
 ## More informations
 
 ### Single entity of the database:
 
 ![](assets/img/eer_diagram.png)
 
-### Flow of project data.
-![](assets/img/flow_chart.jpg)
+## Tests
+
+To run the tests, make sure the database server is running and run the command:
+
+```shell
+$ npm test
+```
+
+[Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests :heart:
+
 
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
