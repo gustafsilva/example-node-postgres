@@ -80,9 +80,31 @@ module.exports = (server) => {
     }
   });
 
-  // server.post("/user/new", () => {
+  server.post("/user/new", (request, response) => {
+    if(request.body) {
+      const user = {
+        name: request.body.name,
+        email: request.body.email,
+        password: md5(request.body.password)
+      };
 
-  // });
+      getClient((errClient, client) => {
+        if ( errClient ) {
+          response.send(500, errClient);
+        }
+  
+        queryParams("INSERT INTO users (email, name, password) VALUES ($1, $2, $3);", [user.email, user.name, user.password], (err, res) => {
+          client.end();
+          let created = true;
+          if (err) {
+            created = false;
+          }
+
+          response.send(200, {success: created});
+        }, client);     
+      });
+    }
+  });
 
   // server.post("/user/edit", () => {
 
