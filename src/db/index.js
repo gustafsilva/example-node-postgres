@@ -1,6 +1,6 @@
 /** 
  * Module responsible for communication directly with database.
- * @module db */
+ * @module Db */
 
 const { Client } = require("pg");
 const { configDB } = require("./config");
