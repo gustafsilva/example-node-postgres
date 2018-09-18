@@ -76,6 +76,9 @@ Just open the `docs/index.html` file in your browser and start browsing... :gree
 
 ![](assets/img/eer_diagram.png)
 
+## Contribution
+If you have found an error or want to improve the example, create an `issue` or `pull request`.
+
 ## Tests
 
 To run the tests, make sure the database server is running and run the command:
@@ -85,10 +88,6 @@ $ npm test
 ```
 
 [Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
-
-
-## Contribution
-If you have found an error or want to improve the example, create an `issue` or `pull request`.
 
 ## Licence
 The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE).
