@@ -4,7 +4,8 @@
   "description": "Simple example node and the node-postgres collection",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "generate-docs": "jsdoc ./src/**/*.js -d docs/"
   },
   "keywords": [
     "js",
@@ -16,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.6.0",
+    "jsdoc": "^3.5.5",
     "lint": "^1.1.2"
   },
   "dependencies": {
