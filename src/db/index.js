@@ -20,7 +20,7 @@ module.exports = {
     return client.query(text, (err, res) => {
       const duration = Date.now() - start;
   
-      log.debug({text: text, duration: duration}, "Executed Simple Query");
+      // log.debug({text: text, duration: duration}, "Executed Simple Query");
       callback(err, res);
     });
   },
@@ -37,7 +37,7 @@ module.exports = {
     return client.query(text, params, (err, res) => {
       const duration = Date.now() - start;
   
-      log.info({text: text, params: params, duration: duration}, "Executed Query:");
+      // log.info({text: text, params: params, duration: duration}, "Executed Query:");
       callback(err, res);
     });
   },
@@ -54,7 +54,7 @@ module.exports = {
     client.connect((err, client, done) => {
       const duration = Date.now() - start;
   
-      log.info({duration: duration}, "New Client Connected");
+      // log.info({duration: duration}, "New Client Connected");
       callback(err, client, done);
     });
   }
