@@ -1,5 +1,5 @@
 # Example Simple API with Node Postgres + Restify
-Simple Example API Rest, using Node, restify and PostgreSQL.
+Simple Example API Rest, using Node, restify, PostgreSQL, Docker and docker-compose.
 
 ## Getting Started
 
@@ -45,7 +45,7 @@ You can access the documentation [here](https://gustafsilva.github.io/example-no
 Or you can generate locally using the command:
 
 ```shell
-$ npm rum generate-docs
+$ npm run generate-docs
 ```
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
