@@ -1,0 +1,26 @@
+{
+  "name": "example-node-postgres",
+  "version": "1.0.0",
+  "description": "Simple example node and the node-postgres collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "node-postgres",
+    "postgresql"
+  ],
+  "author": "Gustavo F. Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "lint": "^1.1.2"
+  },
+  "dependencies": {
+    "log": "^1.4.0",
+    "pg": "^7.4.3",
+    "restify": "^7.2.1"
+  }
+}
