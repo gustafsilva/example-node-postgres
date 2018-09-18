@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  database:
+    image: postgres:9.6
+    container_name: example-node-postgres
+    restart: always # every time start-up will restart
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: example-node-postgres
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql # mapping to file containing initial SQL commands
+    ports:
+      - "5432:5432"
