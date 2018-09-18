@@ -57,19 +57,6 @@ List of commands that can by using `npm`:
   $ npm run clean-docs # remove html documentation
   $ npm run clean # remove documentation in thtml and modules node
 ```
-
-## Documentation
-You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
-Or you can generate locally using the command:
-
-```shell
-$ npm run generate-docs
-```
-
-Just open the `docs/index.html` file in your browser and start browsing... :green_book:
-
-[jsdoc](http://usejsdoc.org) was used for document automation. :heart:
-
 ## More informations
 
 ### Single entity of the database:
@@ -86,6 +73,17 @@ $ npm test
 
 [Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
 
+## Documentation
+You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
+Or you can generate locally using the command:
+
+```shell
+$ npm run generate-docs
+```
+
+Just open the `docs/index.html` file in your browser and start browsing... :green_book:
+
+[jsdoc](http://usejsdoc.org) was used for document automation. :heart:
 
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
