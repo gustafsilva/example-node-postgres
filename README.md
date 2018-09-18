@@ -47,7 +47,7 @@ $ npm run generate-docs
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
 
-[jsdoc]() was used for document automation :heart:
+[jsdoc](http://usejsdoc.org) was used for document automation :heart:
 
 ## More informations
 
