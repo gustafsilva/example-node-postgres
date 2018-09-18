@@ -40,5 +40,12 @@ $ npm start
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
 
+## Documentation
+To generate the documentation, simply execute the command:
+
+```shell
+$ npm rum generate-docs
+```
+
 ## Licence
 The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE).
