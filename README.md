@@ -51,10 +51,10 @@ Just open the `docs/index.html` file in your browser and start browsing... :gree
 
 ### Single entity of the database:
 
-![](docs/img/eer_diagram.png)
+![](assets/img/eer_diagram.png)
 
 ### Flow of project data.
-![](docs/img/flow_chart.jpg)
+![](assets/img/flow_chart.jpg)
 
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
