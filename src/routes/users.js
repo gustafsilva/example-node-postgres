@@ -5,7 +5,7 @@ module.exports = (server) => {
   server.get("/user", (request, response) => {
     getClient((errClient, client) => {
       if ( errClient ) {
-        response.send(500, errClient);
+        response.send(503, errClient);
       }
 
       query("SELECT * FROM users;", (err, res) => {
@@ -29,7 +29,7 @@ module.exports = (server) => {
 
     getClient((errClient, client) => {
       if ( errClient ) {
-        response.send(500, errClient);
+        response.send(503, errClient);
       }
 
       queryParams("SELECT * FROM users WHERE code_user = $1", [codeUser], (err, res) => {
@@ -58,7 +58,7 @@ module.exports = (server) => {
 
       getClient((errClient, client) => {
         if ( errClient ) {
-          response.send(500, errClient);
+          response.send(503, errClient);
         }
   
         queryParams("SELECT * FROM users WHERE email = $1 AND password = $2", [user.email, user.password], (err, res) => {
@@ -90,7 +90,7 @@ module.exports = (server) => {
 
       getClient((errClient, client) => {
         if ( errClient ) {
-          response.send(500, errClient);
+          response.send(503, errClient);
         }
   
         queryParams("INSERT INTO users (email, name, password) VALUES ($1, $2, $3);", [user.email, user.name, user.password], (err) => {
@@ -119,7 +119,7 @@ module.exports = (server) => {
 
       getClient((errClient, client) => {
         if ( errClient ) {
-          response.send(500, errClient);
+          response.send(503, errClient);
         }
   
         queryParams("UPDATE users SET (name, password) = ($1, $2) WHERE email = $3;", [user.name, user.password, user.email], (err) => {
@@ -147,7 +147,7 @@ module.exports = (server) => {
 
       getClient((errClient, client) => {
         if ( errClient ) {
-          response.send(500, errClient);
+          response.send(503, errClient);
         }
   
         queryParams("UPDATE users SET status = false WHERE email = $1 AND password = $2;", [user.email, user.password], (err) => {
