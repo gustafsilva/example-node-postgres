@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "npm test",
-    "generate-docs": "jsdoc ./src/**/*.js -d docs/"
+    "generate-docs": "jsdoc ./src/**/*.js -d docs/",
+    "clean-docs": "rm -r -f docs/",
+    "clean": "rm -r -f docs/ && rm -r -f node_modules/"
   },
   "keywords": [
     "js",
