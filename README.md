@@ -37,19 +37,6 @@ $ npm start
 * [Docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/)
 
-## Informations
-
-### Single entity of the database:
-
-![](docs/img/eer_diagram.png)
-
-### Flow of project data.
-![](docs/img/flow_chart.jpg)
-
-
-## Contribution
-If you have found an error or want to improve the example, create an `issue` or `pull request`.
-
 ## Documentation
 You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
 Or you can generate locally using the command:
@@ -60,6 +47,17 @@ $ npm run generate-docs
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
 
+## More informations
+
+### Single entity of the database:
+
+![](docs/img/eer_diagram.png)
+
+### Flow of project data.
+![](docs/img/flow_chart.jpg)
+
+## Contribution
+If you have found an error or want to improve the example, create an `issue` or `pull request`.
 
 ## Licence
 The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE).
