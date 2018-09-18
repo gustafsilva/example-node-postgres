@@ -37,6 +37,27 @@ $ npm start
 * [Docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/)
 
+## Debugging project 
+
+Some lines of the projects are commented (usually of `logs`), you can withdraw the comment to facilitate the debug in the `terminal`.
+
+You can also run the project in development mode (using `nodemode` to capture changes on the server) with the command:
+```shell
+$ npm run start-dev
+```
+
+### Automated commands using NPM
+List of commands that can by using `npm`:
+```shell
+  $ npm install # install all node dependecies
+  $ npm start # start server
+  $ npm run start-dev # start development mode server (any change restarts the server).
+  $ npm test # perfoms all the tests
+  $ npm run generate-docs # generates html documentation
+  $ npm run clean-docs # remove html documentation
+  $ npm run clean # remove documentation in thtml and modules node
+```
+
 ## Documentation
 You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
 Or you can generate locally using the command:
@@ -47,7 +68,7 @@ $ npm run generate-docs
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
 
-[jsdoc](http://usejsdoc.org) was used for document automation :heart:
+[jsdoc](http://usejsdoc.org) was used for document automation. :heart:
 
 ## More informations
 
@@ -63,7 +84,7 @@ To run the tests, make sure the database server is running and run the command:
 $ npm test
 ```
 
-[Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests :heart:
+[Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
 
 
 ## Contribution
