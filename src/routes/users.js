@@ -138,4 +138,31 @@ module.exports = (server) => {
     }
   });
 
+  server.del("/user", (request, response) => {
+    if(request.body) {
+      const user = {
+        email: request.body.email,
+        password: md5(request.body.password)
+      };
+
+      getClient((errClient, client) => {
+        if ( errClient ) {
+          response.send(500, errClient);
+        }
+  
+        queryParams("UPDATE users SET status = false WHERE email = $1 AND password = $2;", [user.email, user.password], (err) => {
+          client.end();
+          let created = true;
+          if (err) {
+            created = false;
+          }
+
+          response.send(200, {success: created});
+        }, client);     
+      });
+    }
+    else {
+      response.send(300);
+    }
+  });
 };
