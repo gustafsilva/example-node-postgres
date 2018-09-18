@@ -3,14 +3,13 @@ const md5 = require("md5");
 
 module.exports = (server) => {
   server.get("/user", (request, response) => {
-    getClient((errClient) => {
+    getClient((errClient, client) => {
       if ( errClient ) {
         response.send(500, errClient);
       }
 
       query("SELECT * FROM users;", (err, res) => {
-
-        
+        client.end();     
         if (err) {
           response.send(500, err);
         }
@@ -20,8 +19,9 @@ module.exports = (server) => {
           }
           response.send(200, res);
         }
-      });
+      }, client);
     });
+    
   });
 
   server.get("/user/:codeUser", (request, response) => {
@@ -33,6 +33,7 @@ module.exports = (server) => {
       }
 
       queryParams("SELECT * FROM users WHERE code_user = $1", [codeUser], (err, res) => {
+        client.end();        
         if (err) {
           response.send(500, err);
         }
@@ -44,8 +45,7 @@ module.exports = (server) => {
           response.send(200, users);
         }
 
-        client.end();
-      });     
+      }, client);     
     });
   });
 
@@ -62,19 +62,20 @@ module.exports = (server) => {
         }
   
         queryParams("SELECT * FROM users WHERE email = $1 AND password = $2", [user.email, user.password], (err, res) => {
+          client.end();
           if (err) {
             response.send(500, err);
           }
           else {
-            let success = false;
+            let logged = false;
             if(res.rows.length > 0) {
-              success = true;
+              logged = true;
             }
-            response.send(200, success);
+            response.send(200, {success: logged});
           }
   
           client.end();
-        });     
+        }, client);     
       });
     }
   });
