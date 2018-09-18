@@ -49,31 +49,15 @@ $ npm run start-dev
 ### Automated commands
 List of commands that can by using `npm`:
 ```shell
-  $ npm install # install all node dependecies :hammer:
-  $ npm start # start server :memo:
-  $ npm run start-dev # start development mode server (any change restarts the server) :memo::zap:
-  $ npm test # perfoms all the tests :chart_with_upwards_trend:
-  $ npm run generate-docs # generates html documentation :blue_book:
+  $ npm install # install all node dependecies
+  $ npm start # start server
+  $ npm run start-dev # start development mode server (any change restarts the server)
+  $ npm test # perfoms all the tests 
+  $ npm run generate-docs # generates html documentation
   $ npm run clean-docs # remove html documentation
   $ npm run clean # remove documentation in thtml and modules node
 ```
-<<<<<<< HEAD
-=======
 
-## Documentation
-You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
-
-Or you can generate locally using the command:
-
-```shell
-$ npm run generate-docs
-```
-
-Just open the `docs/index.html` file in your browser and start browsing... :green_book:
-
-[jsdoc](http://usejsdoc.org) was used for document automation. :heart:
-
->>>>>>> development
 ## More informations
 
 ### Single entity of the database:
