@@ -2,7 +2,7 @@ CREATE TABLE users(
   code_user SERIAL PRIMARY KEY,
   email VARCHAR(150) UNIQUE NOT NULL,
   name VARCHAR(100) NOT NULL,
-  password VARCHAR(32) NOT NULL,
+  password CHAR(32) NOT NULL,
   status BOOLEAN NOT NULL DEFAULT TRUE
 );
 
