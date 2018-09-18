@@ -4,6 +4,7 @@
   "description": "Simple example node and the node-postgres collection",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "npm test",
     "generate-docs": "jsdoc ./src/**/*.js -d docs/"
   },
