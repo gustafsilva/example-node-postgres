@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "npm test",
+    "test": "jest",
     "generate-docs": "jsdoc ./src/**/*.js -d docs/",
     "clean-docs": "rm -r -f docs/",
     "clean": "rm -r -f docs/ && rm -r -f node_modules/"
@@ -19,9 +19,14 @@
   "author": "Gustavo F. Silva",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.6.0",
+    "jest": "^23.6.0",
     "jsdoc": "^3.5.5",
-    "lint": "^1.1.2"
+    "lint": "^1.1.2",
+    "superagent": "^4.0.0-beta.5",
+    "supertest": "^3.3.0"
   },
   "dependencies": {
     "ak-logger": "^1.1.1",
