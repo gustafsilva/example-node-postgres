@@ -29,7 +29,7 @@ $ cd ../
 $ npm start
 ```
 
-### Ready! :+1: You can already hack the project :sunglasses:
+### Ready! :+1: You can already hack the project. :sunglasses:
 
 ## Dependencies
 * [Node](https://nodejs.org/)
@@ -46,20 +46,21 @@ You can also run the project in development mode (using `nodemode` to capture ch
 $ npm run start-dev
 ```
 
-### Automated commands using NPM
+### Automated commands
 List of commands that can by using `npm`:
 ```shell
-  $ npm install # install all node dependecies
-  $ npm start # start server
-  $ npm run start-dev # start development mode server (any change restarts the server).
-  $ npm test # perfoms all the tests
-  $ npm run generate-docs # generates html documentation
+  $ npm install # install all node dependecies :hammer:
+  $ npm start # start server :memo:
+  $ npm run start-dev # start development mode server (any change restarts the server) :memo::zap:
+  $ npm test # perfoms all the tests :chart_with_upwards_trend:
+  $ npm run generate-docs # generates html documentation :blue_book:
   $ npm run clean-docs # remove html documentation
   $ npm run clean # remove documentation in thtml and modules node
 ```
 
 ## Documentation
 You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
+
 Or you can generate locally using the command:
 
 ```shell
