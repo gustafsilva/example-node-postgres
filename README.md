@@ -37,13 +37,13 @@ $ npm start
 * [Docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/)
 
-## Database
+## Informations
 
-Single entity of the database:
+### Single entity of the database:
 
 ![](docs/img/eer_diagram.png)
 
-## Flow of project data.
+### Flow of project data.
 ![](docs/img/flow_chart.jpg)
 
 
