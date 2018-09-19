@@ -46,7 +46,16 @@ You can also run the project in development mode (using `nodemode` to capture ch
 $ npm run start-dev
 ```
 
-### Automated commands
+## Tests
+
+To run the tests, make sure the database server is running and run the command:
+
+```shell
+$ npm test
+```
+[Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
+
+## Automated commands :fire:
 List of commands that can by using `npm`:
 ```shell
   $ npm install # install all node dependecies
@@ -78,16 +87,6 @@ Just open the `docs/index.html` file in your browser and start browsing... :gree
 
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
-
-## Tests
-
-To run the tests, make sure the database server is running and run the command:
-
-```shell
-$ npm test
-```
-
-[Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
 
 ## Licence
 The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE).
