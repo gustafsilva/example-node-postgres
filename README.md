@@ -31,11 +31,6 @@ $ npm start
 
 ### Ready! :+1: You can already hack the project :sunglasses:
 
-## Dependencies
-* [Node](https://nodejs.org/)
-* [NPM](https://www.npmjs.com/)
-* [Docker](https://www.docker.com/)
-* [docker-compose](https://docs.docker.com/compose/)
 
 ## Debugging project 
 
@@ -45,6 +40,20 @@ You can also run the project in development mode (using `nodemode` to capture ch
 ```shell
 $ npm run start-dev
 ```
+
+## Tests
+
+To run the tests, make sure the database server is running and run the command:
+
+```shell
+$ npm test
+```
+
+## More informations
+
+### Single entity of the database:
+
+![](assets/img/eer_diagram.png)
 
 ### Automated commands using NPM
 List of commands that can by using `npm`:
@@ -57,24 +66,11 @@ List of commands that can by using `npm`:
   $ npm run clean-docs # remove html documentation
   $ npm run clean # remove documentation in thtml and modules node
 ```
-## More informations
-
-### Single entity of the database:
-
-![](assets/img/eer_diagram.png)
-
-## Tests
-
-To run the tests, make sure the database server is running and run the command:
-
-```shell
-$ npm test
-```
 
 [Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
 
 ## Documentation
-You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
+You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/example-node-postgres/1.0.0/).
 Or you can generate locally using the command:
 
 ```shell
@@ -84,6 +80,13 @@ $ npm run generate-docs
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
 
 [jsdoc](http://usejsdoc.org) was used for document automation. :heart:
+
+## Dependencies
+* [Node](https://nodejs.org/)
+* [NPM](https://www.npmjs.com/)
+* [Docker](https://www.docker.com/)
+* [docker-compose](https://docs.docker.com/compose/)
+
 
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.

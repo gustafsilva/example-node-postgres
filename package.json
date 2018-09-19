@@ -7,7 +7,7 @@
     "start": "node index.js",
     "start-dev": "nodemon index.js",
     "test": "jest",
-    "generate-docs": "jsdoc ./src/**/*.js -d docs/",
+    "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
     "clean-docs": "rm -r -f docs/",
     "clean": "rm -r -f docs/ && rm -r -f node_modules/"
   },
@@ -26,6 +26,7 @@
     "jest": "^23.6.0",
     "jsdoc": "^3.5.5",
     "lint": "^1.1.2",
+    "minami": "^1.2.3",
     "nodemon": "^1.18.4",
     "superagent": "^4.0.0-beta.5",
     "supertest": "^3.3.0"

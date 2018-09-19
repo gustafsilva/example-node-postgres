@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-Db.html">Db</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Db.html#.getClient">getClient</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Db.html#.query">query</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-Db.html#.queryParams">queryParams</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-UserController.html">UserController</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-UserController.html#.deleteUser">deleteUser</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-UserController.html#.editUser">editUser</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-UserController.html#.getAllUsers">getAllUsers</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-UserController.html#.getUserByCode">getUserByCode</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-UserController.html#.newUser">newUser</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-UserController.html#.userLogin">userLogin</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>Example Simple API with Node Postgres + Restify</h1><p>Simple Example API Rest, using Node, restify, PostgreSQL, Docker and docker-compose.</p>
+<h2>Getting Started :rocket:</h2><p>First we'll clone the project.</p>
+<pre class="prettyprint source lang-shell"><code>$ git clone https://github.com/gustafsilva/example-node-postgres.git</code></pre><p>Open the project and install node dependencies.</p>
+<pre class="prettyprint source lang-shell"><code>$ cd example-node-postgres
+$ npm install</code></pre><p>Run the database in the container.</p>
+<pre class="prettyprint source lang-shell"><code>$ cd postgres
+$ docker-compose up -d</code></pre><p>Go back to the initial project folder and run the restify server.</p>
+<pre class="prettyprint source lang-shell"><code>$ cd ../
+$ npm start</code></pre><h3>Ready! :+1: You can already hack the project :sunglasses:</h3><h2>Debugging project</h2><p>Some lines of the projects are commented (usually of <code>logs</code>), you can withdraw the comment to facilitate the debug in the <code>terminal</code>.</p>
+<p>You can also run the project in development mode (using <code>nodemode</code> to capture changes on the server) with the command:</p>
+<pre class="prettyprint source lang-shell"><code>$ npm run start-dev</code></pre><h2>Tests</h2><p>To run the tests, make sure the database server is running and run the command:</p>
+<pre class="prettyprint source lang-shell"><code>$ npm test</code></pre><h2>More informations</h2><h3>Single entity of the database:</h3><p><img src="https://github.com/gustafsilva/example-node-postgres/blob/gh-pages/assets/img/eer_diagram.png" alt=""></p>
+<h3>Automated commands using NPM</h3><p>List of commands that can by using <code>npm</code>:</p>
+<pre class="prettyprint source lang-shell"><code>  $ npm install # install all node dependecies
+  $ npm start # start server
+  $ npm run start-dev # start development mode server (any change restarts the server).
+  $ npm test # perfoms all the tests
+  $ npm run generate-docs # generates html documentation
+  $ npm run clean-docs # remove html documentation
+  $ npm run clean # remove documentation in thtml and modules node</code></pre><p><a href="https://jestjs.io/">Jest</a> and <a href="https://www.npmjs.com/package/supertest">supertests</a> were used to automate the tests. :heart:</p>
+<h2>Documentation</h2><p>You can access the documentation <a href="https://gustafsilva.github.io/example-node-postgres/docs/example-node-postgres/1.0.0/">here</a>.
+Or you can generate locally using the command:</p>
+<pre class="prettyprint source lang-shell"><code>$ npm run generate-docs</code></pre><p>Just open the <code>docs/index.html</code> file in your browser and start browsing... :green_book:</p>
+<p><a href="http://usejsdoc.org">jsdoc</a> was used for document automation. :heart:</p>
+<h2>Dependencies</h2><ul>
+<li><a href="https://nodejs.org/">Node</a></li>
+<li><a href="https://www.npmjs.com/">NPM</a></li>
+<li><a href="https://www.docker.com/">Docker</a></li>
+<li><a href="https://docs.docker.com/compose/">docker-compose</a></li>
+</ul>
+<h2>Contribution</h2><p>If you have found an error or want to improve the example, create an <code>issue</code> or <code>pull request</code>.</p>
+<h2>Licence</h2><p>The contents of this repository are covered under the <a href="https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE">MIT License</a>.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Sep 19 2018 18:20:38 GMT-0300 (Brasilia Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
