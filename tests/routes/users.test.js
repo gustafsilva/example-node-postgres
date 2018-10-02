@@ -31,7 +31,7 @@ describe("Routes for login", () => {
   });
 });
 
-describe("Routes for login", () => {
+describe("Routes for sign up", () => {
   test("New user success", () => {
     return request(server)
       .post("/user/new")
