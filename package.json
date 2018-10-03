@@ -9,7 +9,8 @@
     "test": "jest",
     "generate-docs": "jsdoc ./src/**/*.js -d docs/",
     "clean-docs": "rm -r -f docs/",
-    "clean": "rm -r -f docs/ && rm -r -f node_modules/"
+    "clean": "rm -r -f docs/ && rm -r -f node_modules/",
+    "update-coc": "weallbehave -o ."
   },
   "keywords": [
     "js",
@@ -28,7 +29,8 @@
     "lint": "^1.1.2",
     "nodemon": "^1.18.4",
     "superagent": "^4.0.0-beta.5",
-    "supertest": "^3.3.0"
+    "supertest": "^3.3.0",
+    "weallbehave": "^1.2.0"
   },
   "dependencies": {
     "ak-logger": "^1.1.1",
