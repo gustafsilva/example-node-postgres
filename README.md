@@ -89,7 +89,8 @@ Just open the `docs/index.html` file in your browser and start browsing... :gree
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
 
 ## Contributors
-![Gustavo Freitas](https://github.com/gustafsilva)
+![Gustavo Freitas](https://github.com/gustafsilva) - Creator
+
 ![Evan Burrell](https://github.com/burrelle)
 
 ## Licence
