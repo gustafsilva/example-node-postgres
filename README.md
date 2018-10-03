@@ -13,7 +13,14 @@ Open the project and install node dependencies.
 
 ```shell
 $ cd example-node-postgres
-$ npm install
+```
+**With NPM**
+```shell
+$ npm install 
+```
+**With YARN**
+```shell
+$ yarn install 
 ```
 
 Run the database in the container.
@@ -26,7 +33,15 @@ $ docker-compose up -d
 Go back to the initial project folder and run the restify server.
 ```shell
 $ cd ../
+```
+**With NPM**
+```shell
 $ npm start
+```
+
+**With YARN**
+```shell
+$ yarn start
 ```
 
 ### Ready! :+1: You can already hack the project. :sunglasses:
@@ -52,6 +67,8 @@ To run the tests, make sure the database server is running and run the command:
 
 ```shell
 $ npm test
+// or
+$ yarn test
 ```
 [Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
 
@@ -67,12 +84,25 @@ List of commands that can by using `npm`:
   $ npm run clean # remove documentation in thtml and modules node
 ```
 
+List of commands that can by using `yarn`:
+```shell
+  $ yarn install # install all node dependecies
+  $ yarn start # start server
+  $ yarn run start-dev # start development mode server (any change restarts the server)
+  $ yarn test # perfoms all the tests 
+  $ yarn run generate-docs # generates html documentation
+  $ yarn run clean-docs # remove html documentation
+  $ yarn run clean # remove documentation in thtml and modules node
+```
+
 ## Documentation
 You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
 Or you can generate locally using the command:
 
 ```shell
 $ npm run generate-docs
+// or
+$ yarn run generate-docs
 ```
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
