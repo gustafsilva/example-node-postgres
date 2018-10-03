@@ -11,9 +11,15 @@ $ git clone https://github.com/gustafsilva/example-node-postgres.git
 
 Open the project and install node dependencies.
 
+NPM:
 ```shell
 $ cd example-node-postgres
 $ npm install
+```
+yarn:
+```shell
+$ cd example-node-postgres
+$ yarn
 ```
 
 Run the database in the container.
@@ -34,6 +40,7 @@ $ npm start
 ## Dependencies
 * [Node](https://nodejs.org/)
 * [NPM](https://www.npmjs.com/)
+* or [Yarn](https://yarnpkg.com/)
 * [Docker](https://www.docker.com/)
 * [docker-compose](https://docs.docker.com/compose/)
 
@@ -42,16 +49,26 @@ $ npm start
 Some lines of the projects are commented (usually of `logs`), you can withdraw the comment to facilitate the debug in the `terminal`.
 
 You can also run the project in development mode (using `nodemode` to capture changes on the server) with the command:
+NPM:
 ```shell
 $ npm run start-dev
+```
+Yarn
+```shell
+$ yarn start-dev
 ```
 
 ## Tests
 
 To run the tests, make sure the database server is running and run the command:
 
+NPM:
 ```shell
 $ npm test
+```
+Yarn:
+```shell
+$ yarn test
 ```
 [Jest](https://jestjs.io/) and [supertests](https://www.npmjs.com/package/supertest) were used to automate the tests. :heart:
 
@@ -66,13 +83,28 @@ List of commands that can by using `npm`:
   $ npm run clean-docs # remove html documentation
   $ npm run clean # remove documentation in thtml and modules node
 ```
+List of commands that can by using `yarn`:
+```shell
+  $ yarn # install all node dependecies
+  $ yarn start # start server
+  $ yarn start-dev # start development mode server (any change restarts the server)
+  $ yarn test # perfoms all the tests 
+  $ yarn generate-docs # generates html documentation
+  $ yarn clean-docs # remove html documentation
+  $ yarn clean # remove documentation in thtml and modules node
+```
 
 ## Documentation
 You can access the documentation [here](https://gustafsilva.github.io/example-node-postgres/docs/).
 Or you can generate locally using the command:
 
+NPM:
 ```shell
 $ npm run generate-docs
+```
+yarn:
+```shell
+$ yarn generate-docs
 ```
 
 Just open the `docs/index.html` file in your browser and start browsing... :green_book:
