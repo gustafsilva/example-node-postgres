@@ -88,5 +88,10 @@ Just open the `docs/index.html` file in your browser and start browsing... :gree
 ## Contribution
 If you have found an error or want to improve the example, create an `issue` or `pull request`.
 
+## Contributors
+![Gustavo Freitas](https://github.com/gustafsilva) - Creator
+
+![Evan Burrell](https://github.com/burrelle)
+
 ## Licence
 The contents of this repository are covered under the [MIT License](https://github.com/gustafsilva/example-node-postgres/blob/master/LICENSE).
